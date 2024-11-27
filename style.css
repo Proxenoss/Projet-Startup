@@ -1,0 +1,306 @@
+/* Corps principal */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #faf1db;
+    line-height: 1.6;
+}
+
+
+/* Bannière principale */
+#banniere-principale p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; 
+    color: #82acc7;
+    font-size: 30px;
+}
+#banniere-principale {
+    background: linear-gradient(135deg, #88c0d0, #a3be8c);
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    color: #ffffff;
+    border-bottom: 5px solid #2e3440;
+    font-family: 'Playfair Display', serif; 
+    overflow: hidden;
+    background-image: url(image/baniere.png);
+    background-image: no-repeat;
+
+    background-size: cover;
+
+}
+/* Logo dans la bannière */
+#img1{
+    width: 400px;
+    margin-top: 10px;
+    height: auto;
+    border-radius: 60%;
+    border: 5px solid #3d3838; 
+    box-shadow: 5px 10px 20px #000000;
+    margin-bottom: 20px;
+    animation: logo-bounce 2s infinite ease-in-out; 
+    transition: transform 0.3s ease-in-out;
+}
+@keyframes logo-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+#img1 img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); 
+}
+#img2 {
+    position: relative; 
+    background: no-repeat center center; 
+    background-size: cover; 
+    width: 100%; 
+    height: 300px; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    color: #ffffff; 
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Conteneur du sélecteur */
+#langue{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond discret */
+    padding: 8px 12px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Image du drapeau */
+#langue img {
+    width: 35px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Légère ombre pour un effet de profondeur */
+}
+
+/* Style général du sélecteur */
+#langues {
+    background-color: #ffffff; /* Fond blanc */
+    border: 2px solid #88c0d0; /* Bordure dans les tons frais */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    color: #333; /* Texte sombre pour la lisibilité */
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    appearance: none; /* Supprime le style natif */
+    transition: all 0.3s ease-in-out; /* Animation fluide */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Effet au survol */
+#langues:hover {
+    background-color: #f0f9ff; /* Change légèrement le fond */
+    border-color: #2e3440; /* Accentue la bordure */
+    color: #2e3440; /* Texte plus foncé */
+}
+
+/* Options dans le menu déroulant */
+#langues option {
+    background-color: #ffffff; /* Fond blanc */
+    color: #333; /* Texte sombre */
+    font-weight: normal;
+    padding: 10px;
+}
+
+/* Effet au survol des options */
+#langues option:hover {
+    background-color: #88c0d0; /* Couleur d'arrière-plan au survol */
+    color: #ffffff; /* Texte blanc au survol */
+}
+
+
+
+
+/* Bannière de navigation */
+#banniere {
+    display: flex;
+    justify-content: center;
+    background-color: #88c0d0;
+    padding: 10px 0;
+}
+
+#banniere a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+#banniere a:hover {
+    color: #2e3440;
+}
+
+/* Section présentation */
+#presentation {
+    background-color: #e5e9f0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#presentation h3 {
+    font-family: 'Playfair Display', serif;
+    color: #88c0d0;
+    margin-bottom: 15px;
+}
+
+/* Section produits */
+#produits {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+#produits img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+#produits img:hover {
+    transform: scale(1.1);
+}
+
+/* Formulaire compact */
+#formulaire {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#formulaire h1 {
+    font-size: 1.5rem;
+    color: #88c0d0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#formulaire label {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#formulaire input, #formulaire select, #formulaire textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#formulaire input:focus, #formulaire select:focus, #formulaire textarea:focus {
+    border-color: #88c0d0;
+    outline: none;
+}
+
+#formulaire input[type="submit"] {
+    width: 95%;
+    background-color: #88c0d0;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#formulaire input[type="submit"]:hover {
+    background-color: #2e3440;
+}
+
+
+
