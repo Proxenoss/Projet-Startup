@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <link href="style.css" rel="stylesheet">
+        <title>I.C.E</title>
+    </head>
+    <body>
+        <div id="banniere-principale">
+            <img id="img1" src="image/logo.png" alt="Logo de ICE">
+        </div>
+        
+        <div id="langue">
+            <div class="dropdown">
+                <button class="dropbtn">🌍 Langues</button>
+                <ul class="dropdownlangue">
+                    <li><a href="Pagefr.html">Français</a></li>
+                    <li><a href="Pageuk.html">English</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="banniere">
+            <a href="#histoire">Histoire et Présentation</a>
+            <a href="#produits">Produits</a>
+            <a href="#formulaire">Contact</a>
+            <a href="#local">Localisation</a>
+        </div>
+
+        <div id="histoire">
+            <h3>Les glaces artisanales Ice Cream and Environnement sont des délices d'un nouveau genre fait avec le plus soin et respect de la nature</h3><hr>
+            Succombez aux glaces I.C.E, sous forme de cornets garnis fait main avec delicatesse dans nos boutiques, nos gouts sont élaborés
+            sur place afin d'obtenir des textures crémeuses et gouteuses. Nos cornets garnis offrent une nouvelle experience de la glace
+            qui permet une dégustation généreuse jusqu'au bout. De meme, ses glaces respectent les saveurs authentiques
+            et prononcées des gouts que l'on vous souhaite transmettre et qui selon nous est une obligation lors de la création d'une glace. Ainsi les trois 
+            saveurs en vente sauront ravir les papilles des plus nombreux d'entre vous en attendant la sortie de nouveau gouts. Le tout dans une démarche 
+            de simplicité et d'écologie avec des produits respectueux et un principe d'eco-responsabilité.
+        </div>
+
+        <div id="presentation">
+            <div id="img">
+                <img src="image/imagetest.png" alt="photo presentative">
+            </div>
+            <div id="presentationtexte">
+                <h3>Laissez vous tenter par nos créations et goutez l'excellence</h3>
+
+                L'histoire commence par un soufflement d'ennui lors d'une degustation après que la boule de glace soit fini mais que le cône soit encore entier.
+                Suite à ça, nait l'idee d'une glace qui est delicieuse au début mais aussi succulente à la fin. C'est donc sur Nantes en 2022 que Lechat Baptiste et Fokou Steve,
+                decidèrent de lancer leur marque de glaces I.C.E aux cônes garnis dans le but de satisafaire les papilles les plus aiguisées. Avec un debut 
+                compliqué suite au manque de saveurs proposées, la marque commence à prendre de l'ampleur et à attirer les chercheurs d'originalités. Ce qui permettra la création de nouveaux parfums.
+            </div>
+        </div>    
+        
+        <div id="presentation-produits">
+            <h2>Nos Délices Artisanaux</h2>
+            <p>Découvrez nos glaces artisanales, soigneusement élaborées avec des ingrédients de qualité, pour une expérience gourmande inoubliable.</p>
+        </div>
+        
+        <div id="produits">
+            <img src="image/glacefraise.png" alt="Glace à la fraise" id="fraise">
+            <img src="image/glacecookie.png" alt="Glace au cookie" id="cookie">
+            <img src="image/glacechocolat.png" alt="Glace au chocolat" id="chocolat">
+        </div>
+
+        <div id="formulaire">
+            <h1>S'inscrire à notre Newsletter</h1>
+            <form action="Pagefr.html" method="get">
+
+                <label for="popup-toggle" class="open-btn">Allons-y</label>
+                <input type="checkbox" id="popup-toggle" class="popup-toggle">
+                
+                <div class="popup">
+                    <div class="popup-content">
+                        <label for="popup-toggle" class="popup-close">&times;</label>
+                        <h2>S'abonner à notre newsletter</h2>
+                        <form action="Pageprincipale.html" method="get">
+                            <label for="prenom">Prénom :</label>
+                            <input type="text" name="prenom" id="prenom" required><br>
+        
+                            <label for="nom">Nom :</label>
+                            <input type="text" name="nom" id="nom" required><br>
+        
+                            <label for="liste">Fréquence des newsletters :</label>
+                            <select name="liste" id="liste">
+                                <option value="1">Tous les jours</option>
+                                <option value="2">Une fois par semaine</option>
+                                <option value="3">3 à 4 fois par semaine</option>
+                                <option value="4">Une fois toutes les deux semaines</option>
+                                <option value="5">Une fois par mois</option>
+                            </select><br>
+        
+                            <label for="e-mail">Adresse e-mail :</label>
+                            <input type="email" name="e-mail" id="e-mail" required><br>
+        
+                            <label for="infos">Informations de préférence :</label><br>
+                            <textarea name="infos" placeholder="Renseigner vos goûts favoris..." rows="3" cols="30"></textarea><br>
+        
+                            <label>
+                                <input type="checkbox" name="conditions" required> J'accepte les conditions générales et la politique de confidentialité
+                            </label><br>
+        
+                            <input type="submit" name="bouton" value="S'abonner">
+                        </form>
+        
+                    </div>
+                </div>
+        </div>
+        
+        <div id="local">
+            <img src="image/carte.png" alt="carte" id="carte">
+        </div>
+        
+        <div id="contact"></div>
+        iceglacerie@gmail.com
+        07 95 84 31 02
+        
+        adresse 
+        horaire
+
+
+
+    </body>
+</html>

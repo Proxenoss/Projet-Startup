@@ -3,24 +3,35 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #faf1db;
+    background-color: #FAF3E0;
     line-height: 1.6;
 }
 /*----------------------------------------------------------------------------------------------*/
-/* Bannière principale */
-#banniere-principale p {
-    font-size: 1.2rem;
-    margin: 10px 0 0;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold; 
-    color: #82acc7;
-    font-size: 30px;
+/*barre de défilement */
+::-webkit-scrollbar {
+    width: 15px;
+    height: 12px; 
 }
+::-webkit-scrollbar-thumb {
+    background-color: #2e3440; 
+    border-radius: 10px; 
+    border: 3px solid #2e3440; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #88c0d0;
+    border: 3px solid #88c0d0; 
+}
+::-webkit-scrollbar-track {
+    background-color: #f1d165; 
+    border-radius: 10px;
+}
+/*----------------------------------------------------------------------------------------------*/
+/* Bannière principale */
 #banniere-principale {
     padding: 50px 20px;
     text-align: center;
     position: relative;
-    border-bottom: 5px solid #2e3440;
+    border-bottom: 5px solid #3d3838;
     font-family: 'Playfair Display', serif; 
     overflow: hidden;
     background-image: url(image/baniere.png);
@@ -29,16 +40,16 @@ body {
 
 }
 #img1{
-    width: 400px;
+    width: auto;
     margin-top: 10px;
     height: auto;
     border-radius: 60%;
     border: 5px solid #3d3838; 
     box-shadow: 5px 10px 20px #000000;
-    margin-bottom: 20px;
     animation: logo-bounce 2s infinite ease-in-out; 
     transition: transform 0.3s ease-in-out;
 }
+/*Animation du logo (rebondissement)*/
 @keyframes logo-bounce {
     0%, 100% {
         transform: translateY(0);
@@ -53,97 +64,164 @@ body {
     position: fixed;
     top: 10px;
     right: 10px;
-    background-color: rgba(255, 230, 230, 0.8);
-    padding: 8px 12px;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    z-index: 1000;
     font-family: 'Roboto', sans-serif;
+    z-index: 100;
 }
-#langue img {
-    width: 35px;
-    height: auto;
-    border-radius: 50%;
-    margin-right: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-#langues {
-    background-color: #ffffff; 
-    border: 2px solid #88c0d0;
+.dropbtn {
+    background-color: #88c0d0;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
     border-radius: 8px;
-    padding: 8px 12px;
-    font-size: 0.9rem;
-    color: #333;
-    font-weight: bold;
     cursor: pointer;
-    outline: none;
-    appearance: none; 
-    transition: all 0.3s ease-in-out; 
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 6px #000000;
+    transition: background-color 0.3s ease;
 }
-#langues:hover {
-    background-color: #f0f9ff; 
-    border-color: #2e3440; 
-    color: #2e3440;
+.dropbtn:hover {
+    background-color: #3d3838;
 }
-#langues option {
+.dropdownlangue {
+    display: none;
+    position: absolute;
     background-color: #ffffff;
-    color: #333; 
-    font-weight: normal;
-    padding: 10px;
+    min-width: 128px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px #000000;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
 }
-#langues option:hover {
-    background-color: #88c0d0; 
-    color: #ffffff;
+.dropdownlangue li {
+    list-style: none;
+}
+.dropdownlangue li a {
+    color: #000000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdownlangue li a:hover {
+    background-color: #88c0d0;
+    color: white;
+}
+.dropdown:hover .dropdownlangue {
+    display: block;
 }
 /*----------------------------------------------------------------------------------------------*/
 /* Barre de navigation */
 #banniere {
+    position: sticky;
+    top: 0;
+    z-index: 10;
     display: flex;
     justify-content: center;
     background-color: #88c0d0;
-    padding: 10px 0;
+    padding: 10px;
+    height: 45px;
 }
 #banniere a {
     color: #ffffff;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 10px 15px;
     font-weight: bold;
 }
 #banniere a:hover {
-    color: #2e3440;
+    color: #3d3838;
+    text-decoration: underline;
 }
-#presentation {
-    background-color: #e5e9f0;
-    padding: 20px;
+/*----------------------------------------------------------------------------------------------*/
+/* Texte principal */
+#histoire {
+    background-color: #DDEAF6;
+    padding: 25px;
     margin: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 5px #000000;
+    margin-top: 30px;
 }
-#presentation h3 {
+#histoire h3 {
     font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 22px;
     color: #88c0d0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+}
+/*----------------------------------------------------------------------------------------------*/
+/* Texte secondaire */
+#presentation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FAF3E0;
+    padding: 50px;
+    padding-top: 40px;
+    margin: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #000000;
+}
+#presentation img {
+    width: 90%; 
+    border-radius: 15px;
+    box-shadow: 0 3px 10px #000000; 
+}
+#presentation-texte {
+    width: 55%; 
+    text-align: left;
+    padding-left: 20px;
+    font-family: 'Playfair Display', serif; 
+    color:  #000000;
+}
+#presentation-texte h3 {
+    color: #88c0d0; 
+    font-size: 2rem;
+}
+/*----------------------------------------------------------------------------------------------*/
+/* Produits */
+#presentation-produits {
+    text-align: center;
+    background-color: #f4f4f4; 
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px #000000; 
+    margin: 20px;
+    margin-top: 60px;
+}
+#presentation-produits h2 {
+    font-size: 2.5rem;
+    color: #88c0d0; 
+    font-family: 'Playfair Display', serif; 
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#presentation-produits p {
+    font-size: 1.2rem;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
 }
 #produits {
     display: flex;
     justify-content: space-around;
     margin: 20px 0;
+    padding-top: 25px;
 }
 #produits img {
-    width: 200px;
+    width: 300px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 6px #000000;
     transition: transform 0.3s ease-in-out;
 }
 #produits img:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 /*----------------------------------------------------------------------------------------------*/
-/* Formulaire*/
+/* Pop-up et Formulaire*/
 #formulaire {
     background-color: #ffffff;
     padding: 20px;
@@ -158,38 +236,104 @@ body {
     text-align: center;
     margin-bottom: 20px;
 }
-#formulaire label {
-    font-size: 0.9rem;
-    color: #333;
-    margin-bottom: 5px;
-    display: block;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
 }
-#formulaire input, #formulaire select, #formulaire textarea {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 15px;
+.open-btn {
+    padding: 10px 20px;
+    background-color: #88c0d0;
+    text-align: center;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.open-btn:hover {
+    background-color: #2e3440;
+}
+.popup-toggle {
+    display: none;
+}
+.popup {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.popup-toggle:checked + .popup {
+    display: flex;
+}
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    max-height: 500px; 
+    overflow-y: auto; 
+}
+.popup-close {
+    font-size: 2rem;
+    color: #888;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.popup-close:hover {
+    color: #333;
+}
+form {
+    text-align: left;
+    margin-top: 15px;
+}
+form label {
+    display: block;
+    margin: 8px 0 5px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 0.9rem;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s ease-in-out;
 }
-#formulaire input:focus, #formulaire select:focus, #formulaire textarea:focus {
-    border-color: #88c0d0;
-    outline: none;
-}
-#formulaire input[type="submit"] {
-    width: 95%;
+form input[type="submit"] {
     background-color: #88c0d0;
-    color: #ffffff;
+    color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    font-size: 1rem;
     font-weight: bold;
     border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease;
 }
-#formulaire input[type="submit"]:hover {
+form input[type="submit"]:hover {
     background-color: #2e3440;
 }
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+textarea {
+    resize: vertical;
+    height: 60px; 
+}
+
