@@ -220,12 +220,24 @@ body {
 #produits img:hover {
     transform: scale(1.2);
 }
+@media (max-width: 768px) {
+    .produits-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .produit {
+        flex: 1 1 80%; 
+        margin-bottom: 20px; 
+    }
+}
 /*----------------------------------------------------------------------------------------------*/
 /* Pop-up et Formulaire*/
 #formulaire {
     background-color: #ffffff;
     padding: 20px;
-    margin: 20px auto;
+    margin: 150px auto;
+    margin-bottom: 30px;
     max-width: 400px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -336,4 +348,74 @@ textarea {
     resize: vertical;
     height: 60px; 
 }
+/*----------------------------------------------------------------------------------------------*/
+/*Bannière de fin avec la carte et infos complémentaires*/
+#banniere-fin {
+    background-color: #f4f4f4; /* Couleur de fond claire et moderne */
+    padding: 50px 20px; /* Espacement interne */
+    display: flex;
+    justify-content: space-between; /* Met les éléments à gauche et à droite */
+    align-items: center;
+    border-top: 5px solid #2e3440; /* Bordure subtile en haut */
+    flex-wrap: wrap; /* Permet au contenu de s'adapter sur des écrans plus petits */
+}
+
+/* Conteneur de la carte (gauche) */
+#carte-container {
+    flex: 1 1 40%; /* Prend 40% de la largeur */
+    padding-right: 20px;
+    text-align: left;
+}
+
+#carte {
+    width: 100%; /* La carte prend toute la largeur disponible */
+    max-width: 600px; /* Limite la largeur de l'image */
+    border-radius: 8px; /* Coins arrondis pour un effet moderne */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Informations complémentaires (droite) */
+#infos-complementaires {
+    flex: 1 1 50%; /* Prend 50% de la largeur */
+    padding-left: 20px;
+    text-align: center; /* Centre le texte sur la droite */
+}
+
+#infos-complementaires h3 {
+    font-size: 1.8rem;
+    color: #88c0d0; /* Couleur d'accent */
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+}
+
+#infos-complementaires p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    max-width: 600px; /* Limite la largeur du texte */
+    margin: 0 auto; /* Centre le texte dans son bloc */
+}
+
+/* Responsivité : sur petits écrans */
+@media (max-width: 768px) {
+    #banniere-fin {
+        flex-direction: column; /* Sur les petits écrans, les éléments sont empilés */
+        text-align: center;
+    }
+
+    #carte-container, #infos-complementaires {
+        flex: 1 1 100%; /* Chaque section prend 100% de la largeur */
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    #infos-complementaires p {
+        margin-top: 10px; /* Marge entre les paragraphes */
+    }
+}
+
+
+
+
+
 
