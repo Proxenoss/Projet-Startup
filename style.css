@@ -203,7 +203,7 @@ body {
 #produits img:hover {
     transform: scale(1.2);
 }
-/*code pour essayer de rendre responsive les images*/
+/*Code pour essayer de rendre responsive les images*/
 @media (max-width: 768px) {
     .produits-container {
         flex-direction: column; 
@@ -218,16 +218,15 @@ body {
 /*----------------------------------------------------------------------------------------------*/
 /* Pop-up et Formulaire*/
 #formulaire {
-    background-color: #ffffff;
+    background-color: white;
     padding: 20px;
-    margin: 150px auto;
-    margin-bottom: 30px;
-    max-width: 400px;
+    margin: 150px auto 20px auto;
+    max-width: 450px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px #000000 ;
 }
 #formulaire h1 {
-    font-size: 1.5rem;
+    font-size: 25px;
     color: #88c0d0;
     text-align: center;
     margin-bottom: 20px;
@@ -238,14 +237,15 @@ body {
     text-align: center;
     border: none;
     color: white;
-    font-size: 1rem;
+    font-size: 17px;
     cursor: pointer;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px #000000;
 }
 .open-btn:hover {
-    background-color: #2e3440;
+    background-color: #DAB894;
 }
+/*Cacher et faire apparaitre la pop-up*/
 .popup-toggle {
     display: none;
 }
@@ -265,31 +265,28 @@ body {
     display: flex;
 }
 .popup-content {
-    background-color: #fff;
-    padding: 20px;
+    background-color: #ffffff;
+    padding: 15px 20px 20px 20px;
     border-radius: 10px;
     width: 500px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 15px #000000;
     text-align: center;
     position: relative;
     max-height: 500px; 
     overflow-y: auto; 
 }
 .popup-close {
-    font-size: 2rem;
-    color: #888;
+    font-size: 45px;
+    color: #000000;
     cursor: pointer;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 15px;
 }
 .popup-close:hover {
-    color: #333;
+    color: #DAB894;
 }
-form {
-    text-align: left;
-    margin-top: 15px;
-}
+/*intérieur de la pop-up*/
 form label {
     display: block;
     margin: 8px 0 5px;
@@ -304,7 +301,7 @@ form select {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #000000;
     border-radius: 5px;
 }
 form input[type="submit"] {
@@ -318,7 +315,7 @@ form input[type="submit"] {
     transition: background-color 0.3s ease;
 }
 form input[type="submit"]:hover {
-    background-color: #2e3440;
+    background-color: #DAB894;
 }
 input[type="checkbox"] {
     margin-right: 5px;
@@ -330,66 +327,58 @@ textarea {
 /*----------------------------------------------------------------------------------------------*/
 /*Bannière de fin avec la carte et infos complémentaires*/
 #banniere-fin {
-    background-color: #f4f4f4; /* Couleur de fond claire et moderne */
-    padding: 50px 20px; /* Espacement interne */
+    background-color: #000000; 
+    padding: 30px 20px; 
     display: flex;
-    justify-content: space-between; /* Met les éléments à gauche et à droite */
+    justify-content: space-between; 
     align-items: center;
-    border-top: 5px solid #2e3440; /* Bordure subtile en haut */
-    flex-wrap: wrap; /* Permet au contenu de s'adapter sur des écrans plus petits */
 }
-
-/* Conteneur de la carte (gauche) */
 #carte-container {
-    flex: 1 1 40%; /* Prend 40% de la largeur */
+    flex: 1 1 40%;
     padding-right: 20px;
     text-align: left;
+    color: white;
 }
-
-#carte {
-    width: 100%; /* La carte prend toute la largeur disponible */
-    max-width: 600px; /* Limite la largeur de l'image */
-    border-radius: 8px; /* Coins arrondis pour un effet moderne */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+#carte-container h2{
+    justify-content: center;
+    padding-left: 25px;
 }
-
-/* Informations complémentaires (droite) */
+#carte img{
+    width: 450px;
+    padding-left: 20px; 
+    border-radius: 5px;
+}
 #infos-complementaires {
-    flex: 1 1 50%; /* Prend 50% de la largeur */
-    padding-left: 20px;
-    text-align: center; /* Centre le texte sur la droite */
+    flex: 1 1 50%;
+    padding-left: 25px;
+    text-align: center; 
 }
-
 #infos-complementaires h3 {
     font-size: 1.8rem;
-    color: #88c0d0; /* Couleur d'accent */
-    font-family: 'Roboto', sans-serif;
+    color: #88c0d0;
     margin-bottom: 20px;
 }
-
 #infos-complementaires p {
     font-size: 1.2rem;
-    color: #333;
+    color: white;
     line-height: 1.6;
-    max-width: 600px; /* Limite la largeur du texte */
-    margin: 0 auto; /* Centre le texte dans son bloc */
+    max-width: 600px; 
+    margin: 0 auto;
 }
-
-/* Responsivité : sur petits écrans */
+/*code pour essayer de rendre la bannière responsive*/
 @media (max-width: 768px) {
     #banniere-fin {
-        flex-direction: column; /* Sur les petits écrans, les éléments sont empilés */
+        flex-direction: column;
         text-align: center;
     }
 
     #carte-container, #infos-complementaires {
-        flex: 1 1 100%; /* Chaque section prend 100% de la largeur */
+        flex: 1 1 100%; 
         padding-right: 0;
         padding-left: 0;
     }
-
     #infos-complementaires p {
-        margin-top: 10px; /* Marge entre les paragraphes */
+        margin-top: 10px;
     }
 }
 
