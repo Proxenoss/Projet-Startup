@@ -114,10 +114,10 @@ body {
 /*----------------------------------------------------------------------------------------------*/
 /* Barre de navigation */
 #banniere {
+    display: flex;
     position: sticky;
     top: 0;
-    z-index: 1000;
-    display: flex;
+    z-index: 1111;
     justify-content: center;
     background-color: #88c0d0;
     padding: 12px;
