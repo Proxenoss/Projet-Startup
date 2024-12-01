@@ -1,0 +1,175 @@
+/*Palette de couleur*/
+/*  
+    #000000 -> noir
+    #88c0d0 -> bleu clair
+    #faf9ed -> creme clair
+    #DAB894 -> brun clair
+
+*/
+/*Corps du Site*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #faf9ed;
+    line-height: 1.5;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+/*----------------------------------------------------------------------------------------------*/
+/*Bouton Langue*/
+#langue{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+}
+.dropbtn {
+    background-color: #88c0d0;
+    color: white;
+    padding: 10px 20px 10px 15px;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 5px 8px #000000;
+    transition: background-color 0.3s ease-in-out;
+}
+.dropbtn:hover {
+    background-color: #DAB894;
+}
+.dropdownlangue {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 118px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px #000000;
+    margin: 0;
+    padding: 0;
+    z-index: 9999;
+}
+.dropdownlangue li {
+    list-style: none;
+}
+.dropdownlangue li a {
+    color: #000000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdownlangue li a:hover {
+    background-color: #88c0d0;
+    color: white;
+    border-radius: 10px;
+}
+.dropdown:hover .dropdownlangue {
+    display: block;
+}
+/*----------------------------------------------------------------------------------------------*/
+/* Bannière principale */
+#banniere-principale {
+    padding: 50px 0px;
+    position: relative;
+    border-bottom: 3px solid #DAB894;
+    overflow: hidden;
+    background-image: url(image/baniere.png);
+    background-size: cover;
+    background-position: left 50% top 5%;
+}
+#img1{
+    margin-top: 10px;
+    border-radius: 50%;
+    border: 4px solid #DAB894; 
+    box-shadow: 0px 15px 20px #000000;
+    animation: logo-bounce 2s infinite ease-in-out; 
+    transition: transform 0.3s ;
+}
+/*Animation du logo (rebondissement)*/
+@keyframes logo-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-13px);
+    }
+}
+/*----------------------------------------------------------------------------------------------*/
+/* Flèche de retour */
+.retour {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    background-color: #88c0d0;
+    padding: 10px 20px 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 9999;
+}
+
+.retour:hover {
+    background-color: #DAB894;
+    color: white;
+}
+/*----------------------------------------------------------------------------------------------*/
+/* Parti Fondateurs */
+#fondateurs {
+    text-align: center;
+    background-color: #f9f5f0;
+    padding: 50px 20px;
+}
+#fondateurs h2 {
+    font-size: 2.5rem;
+    color: #2e3440;
+    margin-bottom: 40px;
+    font-family: 'Playfair Display', serif;
+}
+.fondateurs-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    flex-wrap: wrap;
+}
+.fondateur {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #000000;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.fondateur:hover {
+    transform: scale(1.05); 
+}
+.fondateur-img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px #000000;
+    margin-bottom: 20px;
+}
+.fondateur h3 {
+    font-size: 1.5rem;
+    color: #88c0d0;
+    margin-bottom: 10px;
+}
+.fondateur p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+/*essaie de code pour rendre la page responsive*/
+@media (max-width: 768px) {
+    .fondateurs-container {
+        flex-direction: column; 
+    }
+
+    .fondateur {
+        width: 80%; 
+        margin: 0 auto; 
+    }
+}
+
+
