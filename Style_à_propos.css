@@ -117,48 +117,46 @@ body {
 /* Parti Fondateurs */
 #fondateurs {
     text-align: center;
-    background-color: #f9f5f0;
+    background-color: #faf9ed;
     padding: 50px 20px;
 }
 #fondateurs h2 {
-    font-size: 2.5rem;
+    font-size: 40px;
     color: #2e3440;
     margin-bottom: 40px;
-    font-family: 'Playfair Display', serif;
 }
 .fondateurs-container {
     display: flex;
     justify-content: center;
-    gap: 40px; 
+    gap: 60px; 
     flex-wrap: wrap;
 }
 .fondateur {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px #000000;
+    box-shadow: 0 4px 8px #000000;
     max-width: 300px;
     text-align: center;
     transition: transform 0.3s ease;
 }
 .fondateur:hover {
-    transform: scale(1.05); 
+    transform: scale(1.1); 
 }
 .fondateur-img {
     width: 100%;
     border-radius: 50%;
-    box-shadow: 0 4px 10px #000000;
+    box-shadow: 0 4px 8px #000000;
     margin-bottom: 20px;
 }
 .fondateur h3 {
-    font-size: 1.5rem;
+    font-size: 25px;
     color: #88c0d0;
     margin-bottom: 10px;
 }
 .fondateur p {
-    font-size: 1rem;
+    font-size: 15px;
     color: #333;
-    line-height: 1.6;
 }
 /*essaie de code pour rendre la page responsive*/
 @media (max-width: 768px) {
