@@ -141,7 +141,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    flex-wrap: wrap; /* Responsif */
+    flex-wrap: wrap; 
     margin-bottom: 40px;
 }
 
