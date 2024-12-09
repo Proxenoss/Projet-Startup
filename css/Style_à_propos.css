@@ -72,7 +72,7 @@ body {
     position: relative;
     border-bottom: 3px solid #DAB894;
     overflow: hidden;
-    background-image: url(image/baniere.png);
+    background-image: url(../image/baniere.png);
     background-size: cover;
     background-position: left 50% top 5%;
 }

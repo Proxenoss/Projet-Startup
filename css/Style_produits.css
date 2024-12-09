@@ -31,7 +31,7 @@ body {
     position: relative;
     border-bottom: 3px solid #DAB894;
     overflow: hidden;
-    background-image: url(image/baniere.png);
+    background-image: url(../image/baniere.png);
     background-size: cover;
     background-position: left 50% top 5%;
 }
@@ -167,6 +167,14 @@ body {
     font-size: 1.5rem;
     color: #88c0d0;
     font-weight: bold;
+}
+#produit-description h1{
+    color: rgb(236, 56, 56);
+    font-weight: bold;
+    margin-top: 3px;
+}
+#reduction {
+    color: grey;
 }
 
 /* Valeurs nutritionnelles */
