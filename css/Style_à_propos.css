@@ -66,13 +66,37 @@ body {
     display: block;
 }
 /*----------------------------------------------------------------------------------------------*/
+/* Bouton Edition */
+#edition-container {
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    z-index: 1000;
+}
+
+#edition-btn {
+    padding: 10px 15px;
+    background-color: #DAB894;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px #000000;
+    transition: background-color 0.3s;
+}
+
+#edition-btn.editing {
+    background-color: #88c0d0;
+}
+/*----------------------------------------------------------------------------------------------*/
 /* Bannière principale */
 #banniere-principale {
     padding: 50px 0px;
     position: relative;
     border-bottom: 3px solid #DAB894;
     overflow: hidden;
-    background-image: url(../image/baniere.png);
+    background-image: url(../Images/baniere.png);
     background-size: cover;
     background-position: left 50% top 5%;
 }
@@ -160,6 +184,7 @@ body {
     font-size: 15px;
     color: #333;
 }
+
 /*essaie de code pour rendre la page responsive*/
 @media (max-width: 768px) {
     .fondateurs-container {
@@ -170,6 +195,40 @@ body {
         width: 80%; 
         margin: 0 auto; 
     }
+}
+
+
+
+
+
+
+
+
+/* Loader overlay (initialement caché) */
+#loader {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(255,255,255,0.8);
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Spinner */
+#loader .spinner {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #88c0d0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
 }
 
 

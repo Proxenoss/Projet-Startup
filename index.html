@@ -2,14 +2,22 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <link href="css/StylePP.css" rel="stylesheet">
+        <link href="CSS/StylePP.css" rel="stylesheet">
+        <script src="Javascript/Indexfr.js" defer></script>
         <title>I.C.E</title>
     </head>
     <body>
         <div id="banniere-principale">
-            <img id="img1" src="image/logo2.png" alt="Logo de ICE">
+            <a href="index.html">
+                <img id="img1" src="Images/logo2.png" alt="Logo de ICE">
+            </a>
         </div>
-            
+        <div id="js-navigation" class="nav-dropdown">
+            <button id="nav-toggle" class="nav-dropbtn">Menu ▼</button>
+            <ul id="nav-menu" class="nav-dropdown-menu" style="display: none;">
+            </ul>
+        </div>
+ 
         <div id="langue">
             <div class="dropdown">
                 <button class="dropbtn">🌍 Langues</button>
@@ -24,6 +32,10 @@
             <a href="#histoire">Histoire et Présentation</a>
             <a href="#presentation-produits">Produits</a>
             <a href="#formulaire">Contacts</a>
+            <div id="time-container">
+                <div id="horloge"></div>
+                <div id="chrono"></div>
+            </div>
         </div>
 
         <div id="histoire">
@@ -38,7 +50,7 @@
 
         <div id="presentation">
             <div id="img">
-                <iframe src="video/presentation.mp4" width="200" height="200" name="nom"></iframe>
+                <iframe src="Videos/presentation.mp4" width="200" height="200" name="nom"></iframe>
             </div>
             <div id="presentation-texte">
                 <h3>Laissez vous tenter par nos créations et goutez l'excellence</h3>
@@ -56,60 +68,58 @@
         </div>
         
         <div id="produits">
-            <a href="pages produits/Fraise.html"><img src="image/glacefraise.png" /></a>
-            <a href="pages produits/Chocolat.html"><img src="image/glacechocolat.png" /></a>
-            <a href="pages produits/Cookie.html"><img src="image/glacecookie.png" /></a>
+            <a href="Pages produits/Fraise.html"><img src="Images/glacefraise.png" /></a>
+            <a href="Pages produits/Chocolat.html"><img src="Images/glacechocolat.png" /></a>
+            <a href="Pages produits/Cookie.html"><img src="Images/glacecookie.png" /></a>
         </div>
 
         <div id="formulaire">
             <h1>S'inscrire à notre Newsletter</h1>
-            <form action="index.html" method="get">
+            <label for="popup-toggle" class="open-btn">Allons-y</label>
+            <input type="checkbox" id="popup-toggle" class="popup-toggle">     
+            <div class="popup">
+                <div class="popup-content">
+                    <label for="popup-toggle" class="popup-close">&#215;</label>
+                    <h2>S'abonner à notre newsletter</h2>
+                    <form action="index.html" method="get">
+                        <label for="prenom">Prénom :</label>
+                        <input type="text" name="prenom" id="prenom" required><br>
+        
+                        <label for="nom">Nom :</label>
+                        <input type="text" name="nom" id="nom" required><br>
+        
+                        <label for="liste">Fréquence des newsletters :</label>
+                        <select name="liste" id="liste">
+                            <option value="1">Tous les jours</option>
+                            <option value="2">Une fois par semaine</option>
+                            <option value="3">3 à 4 fois par semaine</option>
+                            <option value="4">Une fois toutes les deux semaines</option>
+                            <option value="5">Une fois par mois</option>
+                        </select><br>
+        
+                        <label for="e-mail">Adresse e-mail :</label>
+                        <input type="email" name="e-mail" id="e-mail" required><br>
+        
+                        <label for="infos">Informations de préférence :</label><br>
+                        <textarea name="infos" placeholder="Renseigner vos goûts favoris..." rows="3" cols="30"></textarea><br>
+        
+                        <label>
+                            <input type="checkbox" name="conditions" required> J'accepte les conditions générales et la politique de confidentialité
+                        </label><br>
+        
+                        <input type="submit" name="bouton" value="S'abonner">
 
-                <label for="popup-toggle" class="open-btn">Allons-y</label>
-                <input type="checkbox" id="popup-toggle" class="popup-toggle">
-                
-                <div class="popup">
-                    <div class="popup-content">
-                        <label for="popup-toggle" class="popup-close">&#215;</label>
-                        <h2>S'abonner à notre newsletter</h2>
-                        <form action="Pageprincipale.html" method="get">
-                            <label for="prenom">Prénom :</label>
-                            <input type="text" name="prenom" id="prenom" required><br>
+                    </form>
         
-                            <label for="nom">Nom :</label>
-                            <input type="text" name="nom" id="nom" required><br>
-        
-                            <label for="liste">Fréquence des newsletters :</label>
-                            <select name="liste" id="liste">
-                                <option value="1">Tous les jours</option>
-                                <option value="2">Une fois par semaine</option>
-                                <option value="3">3 à 4 fois par semaine</option>
-                                <option value="4">Une fois toutes les deux semaines</option>
-                                <option value="5">Une fois par mois</option>
-                            </select><br>
-        
-                            <label for="e-mail">Adresse e-mail :</label>
-                            <input type="email" name="e-mail" id="e-mail" required><br>
-        
-                            <label for="infos">Informations de préférence :</label><br>
-                            <textarea name="infos" placeholder="Renseigner vos goûts favoris..." rows="3" cols="30"></textarea><br>
-        
-                            <label>
-                                <input type="checkbox" name="conditions" required> J'accepte les conditions générales et la politique de confidentialité
-                            </label><br>
-        
-                            <input type="submit" name="bouton" value="S'abonner">
-                        </form>
-        
-                    </div>
                 </div>
+            </div>
         </div>
         
         <section id="banniere-fin">
             <div id="carte-container">
                 <h2>Où nous trouver</h2>
                 <div id="carte">
-                    <img src="image/carte.png" alt="Carte de localisation" />
+                    <img src="Images/carte.png" alt="Carte de localisation" />
                 </div>
             </div>
             
@@ -117,7 +127,6 @@
                 <h3>Informations complémentaires</h3>
                 <p>Pour nous contactez:</br>
                     Mail : iceglacerie@gmail.com </br>
-                    Numéro : 09 25 63 62 45</br>
                     Horaires :</br>
                         Lundi : Fermé</br>
                         Mardi : 14h/21h</br>
@@ -126,10 +135,14 @@
                         Vendredi : 14h/21h</br>
                         Samedi : 13h/23h</br>
                         Dimanche : 13h/20h</br></br>
-                    <a href="A proposfr.html">A propos de nous</a>
+                    <a href="A propos/A proposfr.html">A propos de nous</a>
                 </p>
             </div>
         </section>
-        
+        <div id="loader">
+            <div class="spinner"></div>
+        </div>
+        <audio id="ringtone" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+
     </body>
 </html>

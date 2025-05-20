@@ -2,12 +2,20 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <link href="css/StylePP.css" rel="stylesheet">
+        <link href="CSS/StylePP.css" rel="stylesheet">
+        <script src="Javascript/Indexuk.js" defer></script>
         <title>I.C.E</title>
     </head>
     <body>
         <div id="banniere-principale">
-            <img id="img1" src="image/logo2.png" alt="Logo de ICE">
+            <a href="indexuk.html">
+                <img id="img1" src="Images/logo2.png" alt="Logo de ICE">
+            </a>
+        </div>
+        <div id="js-navigation" class="nav-dropdown">
+            <button id="nav-toggle" class="nav-dropbtn">Menu ▼</button>
+            <ul id="nav-menu" class="nav-dropdown-menu" style="display: none;">
+            </ul>
         </div>
             
          <div id="langue">
@@ -24,6 +32,10 @@
             <a href="#histoire">History and Presentation</a>
             <a href="#presentation-produits">Products</a>
             <a href="#formulaire">Contacts</a>
+            <div id="time-container">
+                <div id="horloge"></div>
+                <div id="chrono"></div>
+            </div>
         </div>
 
         <div id="histoire">
@@ -38,7 +50,7 @@
 
         <div id="presentation">
             <div id="img">
-                <iframe src="video/presentation.mp4" width="200" height="200" name="nom"></iframe>
+                <iframe src="Videos/presentation.mp4" width="200" height="200" name="nom"></iframe>
             </div>
             <div id="presentation-texte">
                 <h3>Let yourself be tempted by our creations and taste excellence</h3>
@@ -56,14 +68,14 @@
         </div>
         
         <div id="produits">
-            <a href="pages produits/Fraiseuk.html"><img src="image/glacefraise.png" /></a>
-            <a href="pages produits/Chocolatuk.html"><img src="image/glacechocolat.png" /></a>
-            <a href="pages produits/Cookieuk.html"><img src="image/glacecookie.png" /></a>
+            <a href="Pages produits/Fraiseuk.html"><img src="Images/glacefraise.png" /></a>
+            <a href="Pages produits/Chocolatuk.html"><img src="Images/glacechocolat.png" /></a>
+            <a href="Pages produits/Cookieuk.html"><img src="Images/glacecookie.png" /></a>
         </div>
 
         <div id="formulaire">
             <h1>Subscribe to our Newsletter</h1>
-            <form action="index.html" method="get">
+            <form action="Pageuk.html" method="get">
 
                 <label for="popup-toggle" class="open-btn">Go</label>
                 <input type="checkbox" id="popup-toggle" class="popup-toggle">
@@ -72,7 +84,7 @@
                     <div class="popup-content">
                         <label for="popup-toggle" class="popup-close">&times;</label>
                         <h2>Subscribe to our newsletter</h2>
-                        <form action="Pageprincipale.html" method="get">
+                        <form action="Pageuk.html" method="get">
                             <label for="prenom">First name :</label>
                             <input type="text" name="prenom" id="prenom" required><br>
         
@@ -98,7 +110,7 @@
                                 <input type="checkbox" name="conditions" required>I accept the terms and conditions and privacy policy
                             </label><br>
         
-                            <input type="submit" name="bouton" value="S'abonner">
+                            <input type="submit" name="bouton" value="Subscribe">
                         </form>
         
                     </div>
@@ -109,7 +121,7 @@
             <div id="carte-container">
                 <h2>Where to find us</h2>
                 <div id="carte">
-                    <img src="image/carte.png" alt="Carte de localisation" />
+                    <img src="Images/carte.png" alt="Carte de localisation" />
                 </div>
             </div>
             
@@ -126,10 +138,12 @@
                         Friday : 14h/21h</br>
                         Saturday : 13h/23h</br>
                         Sunday : 13h/20h</br></br>
-                    <a href="A proposuk.html">About Us</a>
+                    <a href="A propos/A proposuk.html">About Us</a>
                 </p>
             </div>
         </section>
-        
+        <div id="loader">
+            <div class="spinner"></div>
+        </div>
     </body>
 </html>
