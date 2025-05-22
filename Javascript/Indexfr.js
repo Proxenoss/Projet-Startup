@@ -134,22 +134,19 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 //Loader entre les pages-------------------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
-  const loader = document.getElementById('loader');
-  setTimeout(() => {
-    loader.style.display = 'none';
-  }, 1333);
-  document.querySelectorAll('a').forEach(link => {
+  const loader = document.getElementById('loader');//recupere le loader
+  document.querySelectorAll('a').forEach(link => {//met en place le loader pour chaque lien
     link.addEventListener('click', function(event) {
-      event.preventDefault();
-      loader.style.display = 'flex';
-
+      event.preventDefault();//bloque la redirection
+      loader.style.display = 'flex';//lors d'un click il apparait
       setTimeout(() => {
         loader.style.display = 'none';
-        window.location.href = this.href;
+        window.location.href = this.href;//redirige vers la page a la fin des 2 secondes
       }, 2000);
     });
   });
 });
+
 //Bas de la page-------------------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
     const campusData = {

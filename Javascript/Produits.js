@@ -1,14 +1,14 @@
 //Empecher la copie-------------------------------------------------------------------------------------
 document.addEventListener("copy", function () {
-    console.warn("Le plagiat est interdit. Merci de respecter les droits d’auteur.");
+    console.warn("Le plagiat est interdit. Merci de faire attention lors de copie d'informations venant d'un site internet.");
 });
 //Fleche en haut-------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
-  const backToTopButton = document.getElementById("backToTop");
+  const backToTopButton = document.getElementById("fleche");//recupere l'element fleche
 
-  window.addEventListener("scroll", function () {
+  window.addEventListener("scroll", function () {//lors du scroll declenche la fonction si on depasse 300px
     if (window.pageYOffset > 300) {
-      backToTopButton.style.display = "block";
+      backToTopButton.style.display = "block";//la fleche apparait ou pas
     } else {
       backToTopButton.style.display = "none";
     }
@@ -17,24 +17,21 @@ document.addEventListener("DOMContentLoaded", function () {
   backToTopButton.addEventListener("click", function () {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth"// en haut lors du click de manière fluide
     });
   });
 });
 //Loader-------------------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
-  const loader = document.getElementById('loader');
-  setTimeout(() => {
-    loader.style.display = 'none';
-  }, 1333);
-  document.querySelectorAll('a').forEach(link => {
+  const loader = document.getElementById('loader');//recupere le loader
+  document.querySelectorAll('a').forEach(link => {//met en place le loader pour chaque lien
     link.addEventListener('click', function(event) {
-      event.preventDefault();
-      loader.style.display = 'flex';
+      event.preventDefault();//bloque la redirection
+      loader.style.display = 'flex';//lors d'un click il apparait
 
       setTimeout(() => {
         loader.style.display = 'none';
-        window.location.href = this.href;
+        window.location.href = this.href;//redirige vers la page a la fin des 2 secondes
       }, 2000);
     });
   });

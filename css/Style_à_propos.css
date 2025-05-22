@@ -73,21 +73,21 @@ body {
     right: 10px;
     z-index: 1000;
 }
-
 #edition-btn {
     padding: 10px 15px;
-    background-color: #DAB894;
+    background-color: #88c0d0;
     border: none;
     border-radius: 5px;
     color: white;
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 4px 8px #000000;
-    transition: background-color 0.3s;
 }
-
 #edition-btn.editing {
-    background-color: #88c0d0;
+    background-color: #ff0000;
+}
+#edition-btn:hover{
+    background-color: #DAB894;
 }
 /*----------------------------------------------------------------------------------------------*/
 /* Bannière principale */
@@ -196,27 +196,19 @@ body {
         margin: 0 auto; 
     }
 }
-
-
-
-
-
-
-
-
-/* Loader overlay (initialement caché) */
+/* Loader */
 #loader {
     display: none;
     position: fixed;
     top: 0; left: 0;
     width: 100vw; height: 100vh;
     background: rgba(255,255,255,0.8);
-    z-index: 99999;
+    z-index: 9999;
     justify-content: center;
     align-items: center;
 }
 
-/* Spinner */
+/* Pour que ca tourne */
 #loader .spinner {
     border: 6px solid #f3f3f3;
     border-top: 6px solid #88c0d0;
