@@ -1,3 +1,7 @@
+//ATTENTION : certaines parties du java sont récuperées sur des forums 
+//ou sur la doc (notamment les fonction et leur fonctionnement), de plus, pour
+//régler certaines erreur Copilot fut utilisé.
+
 //Empecher la copie-------------------------------------------------------------------------------------
 document.addEventListener("copy", function () {
     console.warn("Le plagiat est interdit. Merci de faire attention lors de copie d'informations venant d'un site internet.");

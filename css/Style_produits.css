@@ -225,20 +225,13 @@ body {
     cursor: pointer;
     display: none;
     box-shadow: 0 5px 8px #000000;
-    transition: background-color 0.3s, transform 0.2s;
 }
 
 #fleche:hover {
     background-color: #DAB894;
     transform: translateY(-3px);
 }
-
-
-
-
-
-
-/* Loader overlay (initialement caché) */
+/* Loader */
 #loader {
     display: none;
     position: fixed;
@@ -249,8 +242,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-/* Spinner */
+/* Pour que ca tourne */
 #loader .spinner {
     border: 6px solid #f3f3f3;
     border-top: 6px solid #88c0d0;

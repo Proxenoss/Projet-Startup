@@ -444,18 +444,7 @@ textarea {
         margin-top: 10px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-/* Loader overlay (initialement caché) */
+/* Loader */
 #loader {
     display: none;
     position: fixed;
@@ -467,7 +456,7 @@ textarea {
     align-items: center;
 }
 
-/* Spinner */
+/* POur que ca tourne */
 #loader .spinner {
     border: 6px solid #f3f3f3;
     border-top: 6px solid #88c0d0;

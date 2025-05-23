@@ -1,3 +1,7 @@
+//ATTENTION : certaines parties du java sont récuperées sur des forums 
+//ou sur la doc (notamment les fonction et leur fonctionnement), de plus, pour
+//régler certaines erreur Copilot fut utilisé.
+
 //Cartes de Grattage-------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {//attend que la page soit chargée
     const canvases = document.querySelectorAll(".scratch-canvas");//selectionne la class canvas
