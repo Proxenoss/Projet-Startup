@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {//attend que la page 
     let isEditing = false;//met le mode en désactivé au cas ou
 
     function enableEditing() {
+        editBtn.classList.add("editing");//pour ajouter du css
         let addBtn = document.getElementById("add-member-btn");//crée le bouton pour ajouter un  membre
         if (!addBtn) {
             addBtn = document.createElement("button");
